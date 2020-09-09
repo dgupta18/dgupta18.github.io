@@ -1,0 +1,172 @@
+*{ 
+    font-family: "Open Sans";
+    margin: 0px;
+}
+body {
+    background-color: white;
+}
+
+.header{ 
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0, 0, 0, .2)), url("venice-pic.JPG");
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-position: 50% 50%;
+}
+
+.intro-info {
+    margin-left: 20px;
+    position:absolute;
+    bottom:30px;
+}
+
+#name {
+    font-size: 68px;
+    font-weight: 570;
+    color: #ffeff2;
+    letter-spacing: 5px;
+}
+
+#intro {
+    font-size: 20px;
+    font-weight: 450;
+    color: #ffeff2;
+    letter-spacing: 2px;
+}
+
+.links {
+    margin-left: auto;
+    padding-top: 15px;
+    padding-right: 15px;
+}
+
+.icon {
+    height: 18px;
+    width: 18px;
+}
+
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: table;
+    text-align: right;
+}
+
+li {
+    display: inline-block;
+    padding-right: 15px;
+    padding-left: 15px;
+    float: none;
+    font-size: 24px;
+    font-weight: 600;
+    /* border-bottom: 5px solid transparent; */
+}
+
+a:link, :visited {
+    color: #6c7f9c;
+    /* color: #8aa4cc; */
+    text-decoration: none;
+}
+
+a:hover {
+    border-bottom: 3px solid #6c7f9c;
+    display: inline-block;
+}
+
+#onpage {
+    border-bottom: 3px solid #6c7f9c;
+}
+
+.header-about{ 
+    background-image: linear-gradient(to bottom, rgba(0,0,0,.2), rgba(0, 0, 0, .6)), url("venice-pic.JPG");
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-position: 50% 50%;
+}
+
+.table {
+    padding: 30px;
+    position:absolute;
+    top:80px;
+    margin-left: 2vw;
+    width: 96vw;
+    height: 82vh;
+}
+
+.cell {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.empty {
+    width: 8vw;
+}
+
+.about-text {
+    display: block;
+    padding-bottom: 20px;
+}
+
+.about-heading {
+    font-size: 44px;
+    margin-bottom: 20px;
+    color: #ffeff2;
+}
+
+.about-paragraph {
+    font-size: 18px;
+    padding-bottom: 20px;
+    color: #ffeff2;
+}
+
+.pic-background {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 33vw;
+    height: 33vw;
+    /* vertical-align: middle; */
+    /* display: inline-block; */
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, .6);
+}
+
+.my-pic {
+    /* vertical-align: middle; */
+    /* display: inline-block; */
+    width:28vw;
+    height: 28vw;
+    border-radius: 50%;
+}
+
+@media (max-width:800px) {
+    #intro {
+        font-size: 16px;
+    }
+    #name {
+        font-size: 48px;
+    }
+
+    li {
+        font-size: 20px;
+    }
+
+    .icon {
+        width: 16px;
+        height: 16px;
+    }
+
+    .about-heading {
+        font-size: 36px;
+    }
+
+    .about-paragraph {
+        font-size: 14px;
+    }
+
+}
