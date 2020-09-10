@@ -3,10 +3,11 @@ $(document).ready(function() {
         $(document).scroll(function () {
             console.log('in');
 
-            // REPLACE NUBMERS W/ LINKS TO THE IDS OF THE PAGES
+            var vh = $(window).height();
+            // REPLACE NUBMERS W/ LINKS TO THE IDS OF THE PAGES????
 
             // about
-            if ( $(window).scrollTop() < 900) {
+            if ( $(window).scrollTop() < vh - 100) {
                 // make "about" underlined in navigation (#content has class onpage)
                 $('#nav-about').addClass('onpage');
                 // remove from all other pages
@@ -23,7 +24,7 @@ $(document).ready(function() {
             }
 
             // experience
-            if ($(window).scrollTop() >= 900 && $(window).scrollTop() < 1800) {
+            if ($(window).scrollTop() >= vh-100 && $(window).scrollTop() < (vh*2 - 100)) {
                 // make "experience" underlined in navigation (#content has class onpage)
                 $('#nav-experience').addClass('onpage');
                 // remove from all other pages
@@ -39,7 +40,7 @@ $(document).ready(function() {
             }
 
             // projects
-            if ($(window).scrollTop() >= 1800 && $(window).scrollTop() < 2700) {
+            if ($(window).scrollTop() >= (vh * 2 - 100) && $(window).scrollTop() < (vh * 3 - 100)) {
                 // make "projects" underlined in navigation (#content has class onpage)
                 $('#nav-projects').addClass('onpage');
                 // remove from all other pages
@@ -55,7 +56,7 @@ $(document).ready(function() {
             }
 
             // resume
-            if ($(window).scrollTop() >= 2700) {
+            if ($(window).scrollTop() >= (vh * 3 - 100)) {
                 // make "resume" underlined in navigation (#content has class onpage)
                 $('#nav-resume').addClass('onpage');
                 // remove from all other pages
