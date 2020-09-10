@@ -2,44 +2,25 @@
     font-family: "Open Sans";
     margin: 0px;
 }
-body {
-    background-color: white;
+body{
+    background: url("img/gradient2.png") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 .header{ 
-    background-image: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0, 0, 0, .2)), url("img/venice-pic.jpg");
-    height: 100vh;
+    height: 100px;
     width: 100%;
-    background-size: cover;
-    background-position: 50% 50%;
 }
 
 #title{
     font-size: 48px;
-    float: left;
     padding-left: 20px;
     color: #ffeff2;
     font-weight: 570;
-}
-
-.intro-info {
-    margin-left: 20px;
-    position:absolute;
-    bottom:30px;
-}
-
-#name {
-    font-size: 68px;
-    font-weight: 570;
-    color: #ffeff2;
-    letter-spacing: 5px;
-}
-
-#intro {
-    font-size: 20px;
-    font-weight: 450;
-    color: #ffeff2;
-    letter-spacing: 2px;
+    float: left;
 }
 
 .links {
@@ -59,18 +40,18 @@ ul {
     margin: 0;
     padding: 0;
     width: 100%;
-    display: table;
     text-align: right;
 }
 
 li {
     display: inline-block;
+    vertical-align: top;
     padding-right: 15px;
     padding-left: 15px;
     float: none;
     font-size: 24px;
     font-weight: 600;
-    /* border-bottom: 5px solid transparent; */
+    border-bottom: 5px solid transparent;
 }
 
 a:link, :visited {
@@ -82,18 +63,11 @@ a:link, :visited {
 a:hover {
     border-bottom: 3px solid #6c7f9c;
     display: inline-block;
+    margin-bottom: -3px;
 }
 
 #onpage {
     border-bottom: 3px solid #6c7f9c;
-}
-
-.header-about{ 
-    background-image: linear-gradient(to bottom, rgba(0,0,0,.2), rgba(0, 0, 0, .6)), url("img/venice-pic.jpg");
-    height: 100vh;
-    width: 100%;
-    background-size: cover;
-    background-position: 50% 50%;
 }
 
 .table {
@@ -152,12 +126,15 @@ a:hover {
     border-radius: 50%;
 }
 
-@media (max-width:800px) {
-    #intro {
-        font-size: 16px;
-    }
-    #name {
+@media (max-width:420px) {
+    #title {
         font-size: 48px;
+        float: center;
+    }
+
+    ul {
+        margin-top: 50px;
+        text-align: center;
     }
 
     li {
