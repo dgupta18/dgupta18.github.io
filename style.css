@@ -8,67 +8,141 @@ body{
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    max-height: 100vh;
 }
 
-.header{ 
-    height: 100px;
-    width: 100%;
+/*********** profile section ***********/
+#profile{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    position: fixed;
+    width: 350px;
+    height: 100vh;
+    background: rgba(255, 255, 255, 0.14) 
 }
 
-#title{
-    font-size: 48px;
-    padding-left: 20px;
-    color: #ffeff2;
+#name{
+    font-size: 44px;
+    color: #FFF7F8;
     font-weight: 570;
-    float: left;
+    text-align: center;
 }
 
-.links {
-    margin-left: auto;
-    padding-top: 15px;
-    padding-right: 15px;
+#profile-pic{
+    width: 250px;
+    height: 250px;
 }
 
-.icon {
-    height: 20px;
-    width: 20px;
-}
-
-
-ul {
+#navigation{
     list-style-type: none;
     margin: 0;
     padding: 0;
     width: 100%;
-    text-align: right;
+    text-align: center;
 }
 
-li {
-    display: inline-block;
-    vertical-align: top;
-    padding-right: 15px;
-    padding-left: 15px;
-    float: none;
-    font-size: 24px;
+#navigation li {
+    display: block;
+    font-size: 28px;
     font-weight: 600;
     border-bottom: 5px solid transparent;
+    margin: 10px 0;
 }
 
-a:link, :visited {
-    color: #6c7f9c;
-    /* color: #8aa4cc; */
+#navigation a:link, :visited {
+    color: #FFF7F8;
     text-decoration: none;
 }
 
-a:hover {
-    border-bottom: 3px solid #6c7f9c;
+#navigation a:hover {
+    border-bottom: 3px solid #FFF7F8;
     display: inline-block;
     margin-bottom: -3px;
 }
 
 #onpage {
-    border-bottom: 3px solid #6c7f9c;
+    border-bottom: 3px solid #FFF7F8;
 }
+
+#socials{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+#socials li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.icon {
+    height: 35px;
+    width: 35px;
+}
+
+
+@media (max-width: 800px) {
+    #profile {
+        width: 100vw;
+        height: 100vh;
+        position: relative;
+    }
+}
+
+/*********** content section ***********/
+#content {
+    padding: 30px 30px 30px 380px;
+}
+
+@media (max-width: 800px) {
+    #content{
+        padding: 30px 10px;
+    }
+}
+
+
+/*********** content section ***********/
+#progress{
+    background:rgba(162, 178, 213, 0.6);
+    height: 100%;
+    width: 3px;
+    position: fixed;
+    right: 50px;
+    top: 0px;
+}
+
+@media (max-width: 800px) {
+    #progress{
+        display: none;
+    }
+}
+
+.dot {
+    height: 25px;
+    width: 25px;
+    background-color: rgba(162, 178, 213, 0.6);
+    border-radius: 50%;
+    display: block;
+}
+
+.dot-onpage {
+    height: 25px;
+    width: 25px;
+    border: 3px solid rgba(162, 178, 213, 0.6);
+    border-radius: 50%;
+    display: block;
+}
+
+
+
+
+/* old */
+
 
 .table {
     padding: 30px;
@@ -106,30 +180,10 @@ a:hover {
     color: #ffeff2;
 }
 
-.pic-background {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    width: 33vw;
-    height: 33vw;
-    /* vertical-align: middle; */
-    /* display: inline-block; */
-    border-radius: 50%;
-    background-color: rgba(0, 0, 0, .6);
-}
-
-.my-pic {
-    /* vertical-align: middle; */
-    /* display: inline-block; */
-    width:28vw;
-    height: 28vw;
-    border-radius: 50%;
-}
-
-@media screen and (max-width: 420px) {
+/* @media screen and (max-width: 420px) {
     #title {
         font-size: 48px;
-        float: center;
+        float: none;
     }
 
     ul {
@@ -154,4 +208,4 @@ a:hover {
         font-size: 14px;
     }
 
-}
+} */
