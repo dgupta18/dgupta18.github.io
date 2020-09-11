@@ -16,7 +16,7 @@ $(document).ready(function() {
             //             var position = $(element).offset()
 
             // about
-            if ( $(window).scrollTop() < vh - 100) {
+            if ( $(window).scrollTop() < (vh*.5)) {
                 // make "about" underlined in navigation (#content has class onpage)
                 $('#nav-about').addClass('onpage');
                 // remove from all other pages
@@ -33,7 +33,7 @@ $(document).ready(function() {
             }
 
             // experience
-            if ($(window).scrollTop() >= vh-100 && $(window).scrollTop() < (vh*2 - 100)) {
+            if ($(window).scrollTop() >= (vh*.5) && $(window).scrollTop() < (vh*1.5)) {
                 // make "experience" underlined in navigation (#content has class onpage)
                 $('#nav-experience').addClass('onpage');
                 // remove from all other pages
@@ -49,7 +49,7 @@ $(document).ready(function() {
             }
 
             // projects
-            if ($(window).scrollTop() >= (vh * 2 - 100) && $(window).scrollTop() < (vh * 3 - 100)) {
+            if ($(window).scrollTop() >= (vh * 1.5) && $(window).scrollTop() < (vh * 2.5)) {
                 // make "projects" underlined in navigation (#content has class onpage)
                 $('#nav-projects').addClass('onpage');
                 // remove from all other pages
@@ -65,7 +65,7 @@ $(document).ready(function() {
             }
 
             // resume
-            if ($(window).scrollTop() >= (vh * 3 - 100)) {
+            if ($(window).scrollTop() >= (vh * 2.5)) {
                 // make "resume" underlined in navigation (#content has class onpage)
                 $('#nav-resume').addClass('onpage');
                 // remove from all other pages
@@ -82,7 +82,7 @@ $(document).ready(function() {
 
             // flip/stop bouncing arrow. link to scroll top
             if ($(window).scrollTop() > 900 ) {
-                $('.arrow').removeClass('bounce').addClass('flip');
+                $('.arrow').addClass('flip').removeClass('bounce');
             } else {
                 $('.arrow').addClass('bounce').removeClass('flip');
             }
