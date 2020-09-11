@@ -1,5 +1,10 @@
 $(document).ready(function() {
     $(function () {
+        
+        $(".arrow").on("click", function () {
+            $('html').animate({ scrollTop: 0 }, "slow");
+        });
+
         $(document).scroll(function () {
             console.log('in');
 
@@ -74,6 +79,14 @@ $(document).ready(function() {
                 $('#dot-experience').removeClass('dot-onpage').addClass('dot');
                 $('#dot-projects').removeClass('dot-onpage').addClass('dot');
             }
+
+            // flip/stop bouncing arrow. link to scroll top
+            if ($(window).scrollTop() > 900 ) {
+                $('.arrow').removeClass('bounce').addClass('flip');
+            } else {
+                $('.arrow').addClass('bounce').removeClass('flip');
+            }
         });
+
     });
 });
