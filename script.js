@@ -5,8 +5,12 @@ $(document).ready(function() {
 
             var vh = $(window).height();
             // REPLACE NUBMERS W/ LINKS TO THE IDS OF THE PAGES????
+            // $('#element').offset().top tells you how far the element is from the top
+            // so check if it offset from the top, maybe offset - 100, is within the range you want it to be
+            // https://stackoverflow.com/questions/49705653/add-remove-class-based-on-page-scroll
 
             // about
+            var position = $(element).offset()
             if ( $(window).scrollTop() < vh - 100) {
                 // make "about" underlined in navigation (#content has class onpage)
                 $('#nav-about').addClass('onpage');
