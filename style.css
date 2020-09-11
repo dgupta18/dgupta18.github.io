@@ -15,7 +15,7 @@ body{
 #profile{
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
     position: fixed;
     width: 350px;
@@ -27,8 +27,9 @@ body{
     font-size: 36px;
     color: #FFF7F8;
     text-align: center;
-    font-weight: 600;
+    font-weight: 650;
     letter-spacing: 1px;
+    margin-top: 3vh;
 }
 
 #profile-pic{
@@ -171,8 +172,14 @@ body{
         font-size: 24px;
     }
 
+    #socials{
+        padding-bottom: 80px;
+    }
+
     .arrow{
         margin-bottom: 20px;
+        position: fixed;
+        bottom: 1%;
     }
 }
 
@@ -183,8 +190,23 @@ body{
 
 #content > * {
     text-align: left;
-    /* margin-bottom: 80px; */
     height:100vh;
+}
+
+h1 {
+    color: #FFF7F8;
+    font-size: 36px;
+    font-weight: 650;
+    letter-spacing: 1px;
+    padding-top: 3vh;
+    display: inline-block;
+}
+
+.fa, .fas {
+    align-self: center;
+    color: #FFF7F8;
+    margin-right: 20px;
+    transform: translateY(-4%);
 }
 
 @media (max-width: 800px) {
