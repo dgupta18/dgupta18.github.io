@@ -9,12 +9,7 @@ $(document).ready(function() {
             console.log('in');
 
             var vh = $(window).height();
-            // REPLACE NUBMERS W/ LINKS TO THE IDS OF THE PAGES????
-            // $('#element').offset().top tells you how far the element is from the top
-            // so check if it offset from the top, maybe offset - 100, is within the range you want it to be
-            // https://stackoverflow.com/questions/49705653/add-remove-class-based-on-page-scroll
-            //             var position = $(element).offset()
-
+            
             // about
             if ( $(window).scrollTop() < (vh*.5)) {
                 // make "about" underlined in navigation (#content has class onpage)
@@ -49,7 +44,7 @@ $(document).ready(function() {
             }
 
             // projects
-            if ($(window).scrollTop() >= (vh * 1.5) && $(window).scrollTop() < (vh * 2.5)) {
+            if ($(window).scrollTop() >= (vh * 1.5)) {
                 // make "projects" underlined in navigation (#content has class onpage)
                 $('#nav-projects').addClass('onpage');
                 // remove from all other pages
@@ -64,21 +59,21 @@ $(document).ready(function() {
                 $('#dot-resume').removeClass('dot-onpage').addClass('dot');
             }
 
-            // resume
-            if ($(window).scrollTop() >= (vh * 2.5)) {
-                // make "resume" underlined in navigation (#content has class onpage)
-                $('#nav-resume').addClass('onpage');
-                // remove from all other pages
-                $('#nav-about').removeClass('onpage');
-                $('#nav-experience').removeClass('onpage');
-                $('#nav-projects').removeClass('onpage');
-                // dot-onpage
-                $('#dot-resume').removeClass('dot').addClass('dot-onpage');
-                // remove all other empty dots
-                $('#dot-about').removeClass('dot-onpage').addClass('dot');
-                $('#dot-experience').removeClass('dot-onpage').addClass('dot');
-                $('#dot-projects').removeClass('dot-onpage').addClass('dot');
-            }
+            // // resume
+            // if ($(window).scrollTop() >= (vh * 2.5)) {
+            //     // make "resume" underlined in navigation (#content has class onpage)
+            //     $('#nav-resume').addClass('onpage');
+            //     // remove from all other pages
+            //     $('#nav-about').removeClass('onpage');
+            //     $('#nav-experience').removeClass('onpage');
+            //     $('#nav-projects').removeClass('onpage');
+            //     // dot-onpage
+            //     $('#dot-resume').removeClass('dot').addClass('dot-onpage');
+            //     // remove all other empty dots
+            //     $('#dot-about').removeClass('dot-onpage').addClass('dot');
+            //     $('#dot-experience').removeClass('dot-onpage').addClass('dot');
+            //     $('#dot-projects').removeClass('dot-onpage').addClass('dot');
+            // }
 
             // flip/stop bouncing arrow. link to scroll top
             if ($(window).scrollTop() > 900 ) {
