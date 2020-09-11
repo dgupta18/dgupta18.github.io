@@ -118,7 +118,7 @@ body{
     text-align: center;
     width: 40px;
     height: 40px;
-    margin: 10px 0;
+    /* margin: 10px 0; */
     background-image: url(img/arrow.png);
     background-size: contain;
     background-repeat: no-repeat;
@@ -129,6 +129,12 @@ body{
     -o-transform: rotate(180deg) translateY(20px);
     -webkit-transform: rotate(180deg) translateY(20px);
     transform: rotate(180deg) translateY(20px);
+}
+
+@media only screen {
+    #navigation {
+        margin: 0 !important;
+    }
 }
 
 @media (max-height: 740px) {
@@ -149,11 +155,6 @@ body{
     }
 }
 
-@media (min-width: 801px) {
-    .arrow {
-        /* display:none; */
-    }
-}
 @media (max-width: 800px) {
     #profile {
         width: 100vw;
@@ -170,7 +171,7 @@ body{
     }
 
     .arrow{
-        margin-bottom: 30px;
+        margin-bottom: 20px;
     }
 }
 
