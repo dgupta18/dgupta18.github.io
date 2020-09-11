@@ -123,7 +123,10 @@ body{
     background-image: url(img/arrow.png);
     background-size: contain;
     background-repeat: no-repeat;
-    transition: 1s;
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    -o-transition: all 1s;
+    transition: all 1s;
 }
 
 .flip {
@@ -173,7 +176,7 @@ body{
     }
 
     #socials{
-        padding-bottom: 80px;
+        margin-bottom: 120px;
     }
 
     .arrow{
