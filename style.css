@@ -169,8 +169,6 @@ body{
     }
     #socials{
         list-style-type: none;
-        margin: 0;
-        padding: 0;
         width: 100%;
         text-align: center;
     }   
@@ -197,6 +195,7 @@ body{
 
     #socials{
         margin-bottom: 10vh !important;
+        padding-bottom: 5vh;
     }
 
     .arrow{
