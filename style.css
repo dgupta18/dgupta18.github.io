@@ -156,6 +156,10 @@ body{
         font-size: 23px;
     }
 
+    #socials{
+        padding-bottom: 10vh !important;
+    }
+
     .icon{
         height: 26px;
         width: 26px;
