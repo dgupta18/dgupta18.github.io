@@ -304,9 +304,17 @@ h1 {
     height: 30px;
 }
 
+@media (max-width: 800px) {
+    #content > * {
+        min-height:100vh;
+        height: 100%;
+        margin-bottom: 30px;
+    }
+}
 @media (max-width: 580px) {
     .intro-section{
-        font-size: 8px;
+        font-size: .9em;
+        font-weight: 500;
     }
 }
 @media (max-width: 800px) {
