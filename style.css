@@ -253,7 +253,7 @@ h1 {
 .intro-section {
     color: #FFF7F8;
     font-size: 18px;
-    font-weight: 500;
+    font-weight: 550;
     line-height: 1.5em;
     letter-spacing: .8px;
     margin: 30px 40px 0 20px;
@@ -275,9 +275,9 @@ h1 {
     justify-content: space-between;
 }
 
-#t1{
+/* #t1{
     padding-left: 0%;
-}
+} */
 #t2{
     text-align: end;
     padding-right: 5%;
@@ -286,12 +286,12 @@ h1 {
     text-align: end;
     padding-right: 5%;
 }
-#t4{
+/* #t4{
     padding-left: 0%;
 }
 #t5{
     padding-left: 0%;
-}
+} */
 #t6{
     padding-left: 25%;
 }
@@ -304,7 +304,7 @@ h1 {
     height: 30px;
 }
 
-@media (max-width: 580) {
+@media (max-width: 580px) {
     .intro-section{
         font-size: 8px;
     }
@@ -348,7 +348,6 @@ h1 {
 .dot {
     height: 18px;
     width: 18px;
-    /* background-color: rgba(162, 178, 213, 1); */
     background-color: rgba(255, 247, 248, 1);
     border-radius: 50%;
 }
@@ -356,7 +355,6 @@ h1 {
 .dot-onpage {
     height: 15px;
     width: 15px;
-    /* border: 2px solid rgba(162, 178, 213, 1); */
     border: 2px solid rgba(255, 247, 248, 1);
     border-radius: 50%;
 }
