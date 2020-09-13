@@ -5,10 +5,46 @@ $(document).ready(function() {
             $('html').animate({ scrollTop: 0 }, "slow");
         });
 
+        var mdb = document.querySelector('#mdb');
+        mdb.addEventListener('click', function () {
+            mdb.classList.toggle('is-flipped');
+        });
+        var nasa = document.querySelector('#nasa');
+        nasa.addEventListener('click', function () {
+            nasa.classList.toggle('is-flipped');
+        });
+        var pd = document.querySelector('#pd');
+        pd.addEventListener('click', function () {
+            pd.classList.toggle('is-flipped');
+        });
+        var i4c = document.querySelector('#i4c');
+        i4c.addEventListener('click', function () {
+            i4c.classList.toggle('is-flipped');
+        });
+        var jhu = document.querySelector('#jhu');
+        jhu.addEventListener('click', function () {
+            jhu.classList.toggle('is-flipped');
+        });
+        
+        var cmsc389 = document.querySelector('#cmsc389');
+        cmsc389.addEventListener('click', function () {
+            cmsc389.classList.toggle('is-flipped');
+        });
+        var cmsc436 = document.querySelector('#cmsc436');
+        cmsc436.addEventListener('click', function () {
+            cmsc436.classList.toggle('is-flipped');
+        });
+        var capstone = document.querySelector('#capstone');
+        capstone.addEventListener('click', function () {
+            capstone.classList.toggle('is-flipped');
+        });
+
         $(document).scroll(function () {
             console.log('in');
 
             var vh = $(window).height();
+
+            // FIX
 
             // opener
             if ($(window).scrollTop() < (vh * .5)) {
