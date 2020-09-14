@@ -228,7 +228,7 @@ body{
 
 /*********** content section ***********/
 #content {
-    padding: 0px 70px 0px 380px;
+    padding: 0px 70px 0px 370px;
 }
 
 #content > * {
@@ -390,7 +390,7 @@ h1 {
 
 @media (min-width: 801px) {
     .cards {
-        margin-left: 44px;
+        margin-left: 50px;
     }
 }
 
