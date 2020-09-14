@@ -5,46 +5,74 @@ $(document).ready(function() {
             $('html').animate({ scrollTop: 0 }, "slow");
         });
 
+        // card flipping and icon enlarging
         var mdb = document.querySelector('#mdb');
         mdb.addEventListener('click', function () {
             mdb.classList.toggle('is-flipped');
         });
+        $('#mdb').hover(function() {
+            $('.flip')[0].classList.toggle('zoom');
+        }, function(){
+            $('.flip')[0].classList.toggle('zoom');
+        });
+
         var nasa = document.querySelector('#nasa');
         nasa.addEventListener('click', function () {
             nasa.classList.toggle('is-flipped');
         });
-        var pd = document.querySelector('#pd');
-        pd.addEventListener('click', function () {
-            pd.classList.toggle('is-flipped');
+        $('#nasa').hover(function () {
+            $('.flip')[1].classList.toggle('zoom');
+        }, function () {
+            $('.flip')[1].classList.toggle('zoom');
         });
+
         var i4c = document.querySelector('#i4c');
         i4c.addEventListener('click', function () {
             i4c.classList.toggle('is-flipped');
         });
+        $('#i4c').hover(function () {
+            console.log('in hover')
+            $('.flip')[2].classList.toggle('zoom');
+        }, function () {
+            $('.flip')[2].classList.toggle('zoom');
+        });
+
+        var technica = document.querySelector('#technica');
+        technica.addEventListener('click', function () {
+            technica.classList.toggle('is-flipped');
+        });
+        $('#technica').hover(function () {
+            console.log('in hover')
+            $('.flip')[3].classList.toggle('zoom');
+        }, function () {
+            $('.flip')[3].classList.toggle('zoom');
+        });
+
+        var pd = document.querySelector('#pd');
+        pd.addEventListener('click', function () {
+            pd.classList.toggle('is-flipped');
+        });
+        $('#pd').hover(function () {
+            console.log('in hover')
+            $('.flip')[4].classList.toggle('zoom');
+        }, function () {
+            $('.flip')[4].classList.toggle('zoom');
+        });
+
         var jhu = document.querySelector('#jhu');
         jhu.addEventListener('click', function () {
             jhu.classList.toggle('is-flipped');
         });
-        
-        var cmsc389 = document.querySelector('#cmsc389');
-        cmsc389.addEventListener('click', function () {
-            cmsc389.classList.toggle('is-flipped');
-        });
-        var cmsc436 = document.querySelector('#cmsc436');
-        cmsc436.addEventListener('click', function () {
-            cmsc436.classList.toggle('is-flipped');
-        });
-        var capstone = document.querySelector('#capstone');
-        capstone.addEventListener('click', function () {
-            capstone.classList.toggle('is-flipped');
+        $('#jhu').hover(function () {
+            console.log('in hover')
+            $('.flip')[5].classList.toggle('zoom');
+        }, function () {
+            $('.flip')[5].classList.toggle('zoom');
         });
 
+        // changing dots/underline based on scroll
         $(document).scroll(function () {
-            console.log('in');
-
             var vh = $(window).height();
-
-            // FIX
 
             // opener
             if ($(window).scrollTop() < (vh * .5)) {
@@ -61,7 +89,8 @@ $(document).ready(function() {
             }
 
             // about
-            if ($(window).scrollTop() >= (vh * .5) && $(window).scrollTop() < (vh * 1.5)) {
+            if ($(window).scrollTop() >= (vh * .5) 
+            && Math.abs($(window).scrollTop() - $('#about').offset().top) < (vh * .5)) {
                 // make "about" underlined in navigation (#content has class onpage)
                 $('#nav-about').addClass('onpage');
                 // remove from all other pages
@@ -78,7 +107,8 @@ $(document).ready(function() {
             }
 
             // experience
-            if ($(window).scrollTop() >= (vh * 1.5) && $(window).scrollTop() < (vh * 2.5)) {
+            if (Math.abs($(window).scrollTop() - $('#about').offset().top) >= (vh * .5) 
+            && Math.abs($(window).scrollTop() - $('#experience').offset().top) < (vh * .5)) {
                 // make "experience" underlined in navigation (#content has class onpage)
                 $('#nav-experience').addClass('onpage');
                 // remove from all other pages
@@ -94,7 +124,7 @@ $(document).ready(function() {
             }
 
             // projects
-            if ($(window).scrollTop() >= (vh * 2.5) && $(window).scrollTop() < (vh * 3.5)) {
+            if (Math.abs($(window).scrollTop() - $('#projects').offset().top) < (vh * .5)) {
                 // make "projects" underlined in navigation (#content has class onpage)
                 $('#nav-projects').addClass('onpage');
                 // remove from all other pages
@@ -110,10 +140,12 @@ $(document).ready(function() {
             }
 
             // flip/stop bouncing arrow. link to scroll top
-            if ($(window).scrollTop() > 900 ) {
-                $('.arrow').addClass('flip').removeClass('bounce');
+            if ($(window).scrollTop() > 900) {
+                $('.arrow').removeClass('bounce');
+                $('.arrow').css("transform", "rotate(180deg) translateY(20px)");
             } else {
-                $('.arrow').addClass('bounce').removeClass('flip');
+                $('.arrow').css("transform", "rotate(180deg) translateY(-20px)");
+                $('.arrow').addClass('bounce');
             }
         });
 

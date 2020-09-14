@@ -3,7 +3,7 @@
     margin: 0px;
 }
 body{
-    background: url("img/gradient2.png") no-repeat center center fixed;
+    background: url("img/gradient.png") no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -131,16 +131,17 @@ body{
     -webkit-transition: all .6s;
     -moz-transition: all .6s;
     -o-transition: all .6s;
-    transition: all .6s;
+    transition: all .6s linear;
+    transform: rotate(0) translateY(0);
 }
 
-.flip {
+/* .arrow--flip {
     cursor: pointer;
     -moz-transform: rotate(180deg) translateY(20px);
     -o-transform: rotate(180deg) translateY(20px);
     -webkit-transform: rotate(180deg) translateY(20px);
     transform: rotate(180deg) translateY(20px);
-}
+} */
 
 @media only screen {
     #navigation {
@@ -227,7 +228,7 @@ body{
 
 /*********** content section ***********/
 #content {
-    padding: 0px 50px 0px 380px;
+    padding: 0px 70px 0px 380px;
 }
 
 #content > * {
@@ -319,81 +320,6 @@ h1 {
     height: 40px;
 }
 
-/* flip cards */
-.cards {
-    margin-top: 20px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: 100%;
-}
-
-.scene {
-    height: 30vh;
-    margin: 20px;
-    perspective: 600px;
-    width: 24vw;
-    min-width: 250px;
-}
-
-@media (min-width: 801px) {
-    .cards {
-        margin-left: 44px;
-    }
-}
-
-@media (max-width: 800px) {
-    .cards{
-        justify-content: center;
-    }
-}
-
-.card {
-    width: 100%;
-    height: 100%;
-    transition: transform .6s;
-    transform-style: preserve-3d;
-    cursor: pointer;
-    position: relative;
-}
-
-.card.is-flipped {
-    transform: rotateY(180deg);
-}
-
-.card__face {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    color: white;
-    text-align: center;
-    font-weight: bold;
-    font-size: 20px;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-}
-
-.card__face--front {
-    background-color: rgba(255, 255, 255, 0.14);
-}
-
-.card__face--back {
-    background-color: rgba(255, 255, 255, 0.14);
-    transform: rotateY(180deg);
-}
-
-/* experience page */
-#experience {
-    min-height:100vh;
-    height: 100%;
-    margin-bottom: 80px;
-}
-
-#projects {
-    min-height:100vh;
-    height: 100%;
-}
-
 @media (max-width: 580px) {
     .intro-section{
         font-size: 15px !important;
@@ -430,6 +356,182 @@ h1 {
     }
 }
 
+/* flip cards */
+.cards {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.scene {
+    height: 24vh;
+    min-height: 220px;
+    margin: 10px;
+    perspective: 600px;
+    width: 26vw;
+    min-width: 320px;
+}
+
+.flip{
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    height: 18px;
+    transition: all .2s linear;
+    opacity: .7;
+}
+
+.flip.zoom{
+    height: 24px;
+    opacity: 1;
+}
+
+@media (min-width: 801px) {
+    .cards {
+        margin-left: 44px;
+    }
+}
+
+@media (max-width: 800px) {
+    .scene {
+        width: 100% !important;
+    }
+    .cards{
+        justify-content: center;
+    }
+}
+
+@media (max-width: 1132px) {
+    .scene {
+        width: 85%;
+    }
+}
+
+.card {
+    width: 100%;
+    height: 100%;
+    transition: transform .6s;
+    transform-style: preserve-3d;
+    position: relative;
+    display: flex;
+}
+
+#experience .card{
+    cursor: pointer;
+}
+
+.card.is-flipped {
+    transform: rotateY(180deg);
+}
+
+.card__face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.card__face--front {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.14);
+}
+
+.card-img{
+    max-width: 250px;
+    min-height: 90px;
+}
+.card-role{
+    font-size: 18px;
+    font-weight: 600;
+    margin: 7px 0;
+}
+.card-timeplace{
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.card__face--back {
+    background-color: rgba(255, 255, 255, 0.14);
+    transform: rotateY(180deg);
+    display: flex;
+    justify-content: start;
+}
+
+/* experience page */
+#experience {
+    min-height:100vh;
+    height: 100%;
+    margin-bottom: 80px;
+}
+
+#experience .card__face--front{
+    justify-content: center;
+}
+
+hr{
+    margin-top: 5px;
+    border: 1px solid rgba(255, 247, 248, .8);
+    width: 30%;
+    align-self: center;
+}
+
+.card-info{
+    font-size: 13px;
+    font-weight: 500;
+    text-align: left;
+    margin: 10px 13px 10px 0;
+}
+
+/* projects page */
+#projects {
+    min-height:100vh;
+    height: 100%;
+    margin-bottom: 40px;
+}
+
+#projects .card__face--front{
+    justify-content: flex-end;
+}
+
+#projects a {
+    text-decoration: none;
+}
+
+.proj-title{
+    font-size: 22px;
+    margin: 0 10px 5px 10px;
+}
+
+.proj-info{
+    font-size: 16px;
+    margin: 5px 20px 10px 20px;
+    font-weight: 500;
+}
+
+button{
+    background-color: rgba(255, 247, 248, 0);
+    color: rgba(255, 247, 248, 1);
+    border: 3px solid rgba(255, 247, 248, .8); /* Green */
+    font-size: 18px;
+    font-weight: 600;
+}
+
+/* #projects a:hover {
+    text-decoration: underline double;
+} */
+
 
 
 /*********** progress section ***********/
@@ -446,9 +548,13 @@ h1 {
 }
 
 @media (max-width: 800px) {
-    #progress, #progress *{
-        display: none;
+    #progress, #progress * {
+        display:none;
     }
+    /* #progress{
+        height: 20%;
+        top: 75%;
+    } */
 }
 
 .dot {
