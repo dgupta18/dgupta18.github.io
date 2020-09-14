@@ -501,8 +501,12 @@ hr{
     margin-bottom: 40px;
 }
 
+#projects .scene{
+    min-height: 270px !important;
+}
+
 #projects .card__face--front{
-    justify-content: flex-end;
+    justify-content: center;
 }
 
 #projects a {
@@ -512,20 +516,45 @@ hr{
 .proj-title{
     font-size: 22px;
     margin: 0 10px 5px 10px;
+    font-weight: 700;
 }
 
 .proj-info{
-    font-size: 16px;
-    margin: 5px 20px 10px 20px;
+    font-size: 14px;
+    /* margin: 5px 20px 10px 20px; */
     font-weight: 500;
+    margin-bottom: 10px;
 }
 
-button{
+.proj-description{
+    font-size: 15px;
+    margin: 15px 20px 10px 20px;
+    font-weight: 550;
+}
+
+.proj-hr {
+    width: 50px !important;
+    margin-bottom: 10px;
+}
+
+.button {
     background-color: rgba(255, 247, 248, 0);
     color: rgba(255, 247, 248, 1);
     border: 3px solid rgba(255, 247, 248, .8); /* Green */
+    border-radius: 5%;
     font-size: 18px;
     font-weight: 600;
+    margin: 10px 15px 0 15px;
+    padding: 3px 10px;
+}
+
+.button:hover {
+    background-color: rgba(255, 247, 248, .3);
+}
+
+.row{
+    display: flex;
+    flex-direction: row;
 }
 
 /* #projects a:hover {
