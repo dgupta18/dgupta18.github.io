@@ -506,7 +506,7 @@ hr{
 }
 
 #projects .card__face--front{
-    justify-content: center;
+    justify-content: start;
 }
 
 #projects a {
@@ -515,7 +515,7 @@ hr{
 
 .proj-title{
     font-size: 22px;
-    margin: 0 10px 5px 10px;
+    margin: 8% 10px 5px 10px;
     font-weight: 700;
 }
 
@@ -533,8 +533,8 @@ hr{
 }
 
 .proj-hr {
-    width: 50px !important;
-    margin-bottom: 10px;
+    width:90% !important;
+    margin: 10px 0;
 }
 
 .button {
